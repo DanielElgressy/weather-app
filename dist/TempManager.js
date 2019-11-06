@@ -28,6 +28,9 @@ class TempManager {
 
 
     removeCity(cityName) {
+        let checking = this.cityData.findIndex(c => c.name === cityName)
+        this.cityData.splice(checking,1)
+        
         $.ajax({
             method: 'DELETE',
             url: "/city/" + cityName,

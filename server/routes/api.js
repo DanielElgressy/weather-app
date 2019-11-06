@@ -18,17 +18,18 @@ router.get('/city/:cityName', function (req, res) {
 
         let weatherData = JSON.parse(response.body)
         let nameCheck = weatherData.name || weatherData.message
-        if ( nameCheck === weatherData.message){
-            console.log(`The name ${cityName} does not make sense,wtf !!`)
+        if (nameCheck === weatherData.message) {
+            console.log(`The name ${cityName} does not make sense!!`)
             return
         }
-        let filteredData = {name: nameCheck,
-                            temperature: weatherData.main.temp, 
-                            condition: weatherData.weather[0].description,
-                            conditionPic: weatherData.weather[0].icon                
-                            }
+        let filteredData = {
+            name: nameCheck,
+            temperature: weatherData.main.temp,
+            condition: weatherData.weather[0].description,
+            conditionPic: weatherData.weather[0].icon
+        }
         res.send(filteredData)
-                            
+
     })
 })
 
@@ -52,12 +53,11 @@ router.post('/city', async function (req, res) {
 
 router.delete('/city/:cityName', async function (req, res) {
     let cityName = req.params.cityName
-    let deleteCity= await City.findOneAndDelete({
+    let deleteCity = await City.findOneAndDelete({
         name: cityName
     })
-        res.send(`city ${deleteCity.name} deleted from DB`)
-    })
-
+    res.send(`city ${deleteCity.name} deleted from DB`)
+})
 
 
 
