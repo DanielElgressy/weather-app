@@ -24,7 +24,7 @@ router.get('/city/:cityName', function (req, res) {
         }
         let filteredData = {
             name: nameCheck,
-            temperature: weatherData.main.temp,
+            temperature: Math.round(weatherData.main.temp),
             condition: weatherData.weather[0].description,
             conditionPic: weatherData.weather[0].icon
         }
