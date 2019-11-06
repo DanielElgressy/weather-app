@@ -24,6 +24,8 @@ $("#data").on("click", "#saveCity", function () {
     let cityName = $(this).closest(".city").find("#cityName").text()
     console.log(cityName)
     tempmanager.saveCity(cityName)
+    alert(`${cityName} save in db`)
+
 
 })
 
@@ -32,4 +34,3 @@ $("#data").on("click", "#deletCity", function () {
     tempmanager.removeCity(cityName)
     render.rendererData(tempmanager.cityData)
 })
-
