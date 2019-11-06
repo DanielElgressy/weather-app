@@ -1,4 +1,5 @@
 
+
 #city-input{
     background: none;
     color: white;
@@ -6,20 +7,35 @@
     font-size: 18px;
     border-bottom: 2px solid rgb(61, 58, 58);
     font-family: Arial, Helvetica, sans-serif;
+}
+#show{
+    border-radius: 9px;
+    font-family: sans-serif;
+    color: rgba(33, 33, 68, 0.658);
+    font-size: 90%;
+    border: solid 2px rgba(54, 54, 83, 0.658);
+    text-transform: uppercase;
+    background: none;
+}
 
+#show:hover {
+    color: #fff;
+    border: solid #fff 2px;
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    width:100%;
     display: grid;
     grid-template-rows: 1fr 6fr;
     height: 100vh;
     background-image: url("http://pctechtips.org/apps/todo/img/Chicago-Wallpaper-3.jpg");
-    z-index: -10;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    font-size: 1.3rem;	
+    font-size: 110%;	
 }
 
 #container{
@@ -39,21 +55,27 @@ body {
     margin-top: 50px;
     margin-bottom: 70px;
     grid-gap: 30px;
+    width: 95%;
+    justify-self: center;
+    transition: ease all .5s;
 
 }
 
 .city {
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    background-image: linear-gradient(to bottom, #a18cd127 0%, #fbc2eb 100%);
     display: inline-block;
     position: relative;
     font-family: sans-serif;
+    max-height: 150px;
+    border-radius: 5px;
+    min-height: 150px;
+
 }
 
 .button1{
-    position: relative;
-    bottom: -35px;
-    float: right;
-    right: -120px;
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
     height: 50px;
     width:  50px;
     border: none;
@@ -61,23 +83,28 @@ body {
     font-size: 25px;
     color:white;
     text-shadow: 1.5px 1.5px #ff000077;
+    box-shadow: 0.5px 0.5px gray;
     background: rgb(91, 235, 155);
-
+}
+.button1:hover {
+    cursor: pointer;
 }
 
 .button2{
-    position: relative;
-    height: 30px;
-    font-weight: 200;
-    float: left;
+    position: absolute;
+    height: 25px;
+    width:  40px;
     left: 5px;
-    font-size: 25px;
-    bottom: -25px;
-    width:  50px;
+    font-size: 20px;
+    bottom: 5px;
     border: none;
     border-radius: 10%;
     text-shadow: 1.5px 1.5px #ff000077;
     background: rgb(236, 111, 61);
+}
+
+.button2:hover {
+    cursor: pointer;
 }
 
 #cityName {
@@ -93,17 +120,35 @@ body {
     left: 20px;
 }
 #citycontition {
-    position: relative;
+    position: absolute;
     font-family: Helvetica;
-    float: right;
     right: 10px;
     bottom: 70px;
 }
 
 #conditionPic {
-    position: relative;
+    position: absolute;
     font-family: Helvetica;
-    float: right;
     right: 10px;
     bottom: 40px;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    #data {
+        width: 250px;
+       }
+
+    #cityTemp {
+        position: relative;
+        font-size: 35px;
+        top: -40px;
+        left: 150px;
+    }
+
+    #cityName {
+       font-size: 35px;
+    }
+
 }
