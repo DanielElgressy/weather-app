@@ -1,0 +1,109 @@
+
+#city-input{
+    background: none;
+    color: white;
+    border: none;
+    font-size: 18px;
+    border-bottom: 2px solid rgb(61, 58, 58);
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+    height: 100vh;
+    background-image: url("http://pctechtips.org/apps/todo/img/Chicago-Wallpaper-3.jpg");
+    z-index: -10;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 1.3rem;	
+}
+
+#container{
+    position: relative;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+
+
+}
+
+
+#data {
+    position: relative;
+    display: grid;  
+    grid-template-rows: repeat(auto-fill, minmax(150px,1fr));
+    margin-top: 50px;
+    margin-bottom: 70px;
+    grid-gap: 30px;
+
+}
+
+.city {
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    display: inline-block;
+    position: relative;
+    font-family: sans-serif;
+}
+
+.button1{
+    position: relative;
+    bottom: -35px;
+    float: right;
+    right: -120px;
+    height: 50px;
+    width:  50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 25px;
+    color:white;
+    text-shadow: 1.5px 1.5px #ff000077;
+    background: rgb(91, 235, 155);
+
+}
+
+.button2{
+    position: relative;
+    height: 30px;
+    font-weight: 200;
+    float: left;
+    left: 5px;
+    font-size: 25px;
+    bottom: -25px;
+    width:  50px;
+    border: none;
+    border-radius: 10%;
+    text-shadow: 1.5px 1.5px #ff000077;
+    background: rgb(236, 111, 61);
+}
+
+#cityName {
+    position: relative;
+    font-size: 40px;
+    left: 20px;
+}
+
+#cityTemp {
+    position: relative;
+    font-size: 60px;
+    font-family: Helvetica;
+    left: 20px;
+}
+#citycontition {
+    position: relative;
+    font-family: Helvetica;
+    float: right;
+    right: 10px;
+    bottom: 70px;
+}
+
+#conditionPic {
+    position: relative;
+    font-family: Helvetica;
+    float: right;
+    right: 10px;
+    bottom: 40px;
+}

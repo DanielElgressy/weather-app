@@ -15,14 +15,20 @@ router.get('/city/:cityName', function (req, res) {
 
     request(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&APPID=7d830ccd5402469d00c752bbe6ac4ffb`, function (err, response) {
 
+
         let weatherData = JSON.parse(response.body)
-        let filteredData = {City: weatherData.name,
+        let nameCheck = weatherData.name || weatherData.message
+        if ( nameCheck === weatherData.message){
+            console.log(`The name ${cityName} does not make sense,wtf !!`)
+            return
+        }
+        let filteredData = {name: nameCheck,
                             temperature: weatherData.main.temp, 
                             condition: weatherData.weather[0].description,
                             conditionPic: weatherData.weather[0].icon                
                             }
         res.send(filteredData)
-
+                            
     })
 })
 

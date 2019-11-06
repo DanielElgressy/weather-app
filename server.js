@@ -4,7 +4,7 @@ const path = require("path")
 const bodyParser = require("body-parser")
 const mongoose = require('mongoose')
 const port = process.env.PORT || 5000
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/weatherDB", {useNewUrlParser: true})
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/weatherDB", {useNewUrlParser: true, useUnifiedTopology: true })
 const api = require('./server/routes/api')
 
 
