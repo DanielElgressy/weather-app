@@ -24,6 +24,7 @@ $("#data").on("click", "#saveCity", function () {
     let cityName = $(this).closest(".city").find("#cityName").text()
     console.log(cityName)
     tempmanager.saveCity(cityName)
+    alert(`${cityName} saved in DB`)
 
 })
 
