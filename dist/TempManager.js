@@ -16,6 +16,7 @@ class TempManager {
         this.cityData.unshift(res)
     }
 
+
     async saveCity(cityName) {
         for (let city of this.cityData) {
             console.log(city)
@@ -24,7 +25,6 @@ class TempManager {
             }
         }
     }
-
 
 
     removeCity(cityName) {

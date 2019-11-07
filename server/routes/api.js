@@ -10,6 +10,7 @@ router.get('/test', function (req, res) {
     res.send("Hello")
 })
 
+
 router.get('/city/:cityName', function (req, res) {
     let cityName = req.params.cityName
 
@@ -35,12 +36,10 @@ router.get('/city/:cityName', function (req, res) {
 
 
 
-
 router.get('/cities', async function (req, res) {
     const cities = await City.find({})
     res.send(cities)
 })
-
 
 
 router.post('/city', async function (req, res) {

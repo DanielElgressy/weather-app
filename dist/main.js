@@ -1,5 +1,5 @@
 const render = new renderer
-const tempmanager = new TempManager
+const tempmanager= new TempManager
 
 
 const loadPage = async () => {
@@ -34,11 +34,3 @@ $("#data").on("click", "#deletCity", function () {
     render.rendererData(tempmanager.cityData)
 })
 
-$(".txtb input").on("focus",function(){
-    $(this).addClass("focus")
-})
-
-$(".txtb input").on("blur",function(){
-    if($(this).val() == "")
-    $(this).removeClass("focus")
-})
