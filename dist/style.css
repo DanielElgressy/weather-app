@@ -37,7 +37,6 @@
     background-color: rgb(241, 236, 236);
     color: rgba(49, 49, 49, 0.973);
     transition:  all .1s;
-    /* border: solid 2px rgba(54, 54, 54, 0.89); */
 }
 
 body {
@@ -72,6 +71,7 @@ body {
     width: 95%;
     justify-self: center;
     transition: ease all .5s;
+    overflow: scroll;
 }
 
 .city {
