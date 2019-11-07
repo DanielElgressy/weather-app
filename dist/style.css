@@ -34,7 +34,7 @@
 
 #show:hover {
     color: #fff;
-    background-color: rgb(223, 23, 23);
+    background-color: rgb(241, 236, 236);
     color: rgba(49, 49, 49, 0.973);
     transition:  all .1s;
 }
