@@ -1,7 +1,7 @@
 
-class renderer {
+class renderer { 
 
-    rendererData(allCityData ) {
+    rendererData(allCityData ) { 
         $("#data").empty()
         const source = $("#result-template").html()
         const template = Handlebars.compile(source)

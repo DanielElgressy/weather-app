@@ -1,5 +1,5 @@
 const render = new renderer
-const tempmanager= new TempManager
+const tempmanager = new TempManager
 
 
 const loadPage = async () => {
@@ -7,18 +7,26 @@ const loadPage = async () => {
     render.rendererData(tempmanager.cityData)
 }
 
-loadPage()
+
 
 $("#show").on("click", function () {
-    handleSearch()
+    let input = $("#city-input").val()
+    let cityExist = tempmanager.cityData.some(x => x.name && (x.name.toLowerCase() == input.toLowerCase()));
+    if (cityExist == true) {
+        alert(`${input} already exist`); //לא יאפשר להציג את אותה עיר יותר מפעם אחת
+    } else {
+        handleSearch(input)
+    }
 })
 
-const handleSearch = async function () {
-    let input = $("#city-input").val()
+const handleSearch = async function (input) {
     await tempmanager.getCityData(input)
     render.rendererData(tempmanager.cityData)
     $("#city-input").val("")
 }
+
+
+
 
 $("#data").on("click", "#saveCity", function () {
     let cityName = $(this).closest(".city").find("#cityName").text()
@@ -28,9 +36,13 @@ $("#data").on("click", "#saveCity", function () {
 
 })
 
+
 $("#data").on("click", "#deletCity", function () {
     let cityName = $(this).closest(".city").find("#cityName").text()
     tempmanager.removeCity(cityName)
     render.rendererData(tempmanager.cityData)
 })
+
+
+loadPage()  
 

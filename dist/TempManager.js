@@ -1,36 +1,35 @@
 
-class TempManager {
+class TempManager { 
 
     constructor() {
         this.cityData = []
-
     }
 
-    async getDataFromDB() {
+    async getDataFromDB() { 
         const res = await $.get(`/cities`)
         this.cityData = res
     }
 
-    async getCityData(cityName) {
+    async getCityData(cityName) { 
         const res = await $.get(`/city/${cityName}`)
         this.cityData.unshift(res)
     }
 
 
-    async saveCity(cityName) {
+    async saveCity(cityName) {  
         for (let city of this.cityData) {
-            console.log(city)
             if (city.name === cityName) {
-                await $.post(`/city`, city)
+                await $.post(`/city`, city) 
+                return //making sure tel aviv will be saved once when pressing save 
             }
         }
-    }
+    } 
 
 
-    removeCity(cityName) {
+    removeCity(cityName) { 
         let checking = this.cityData.findIndex(c => c.name === cityName)
-        this.cityData.splice(checking,1)
-        
+        this.cityData.splice(checking, 1)
+
         $.ajax({
             method: 'DELETE',
             url: "/city/" + cityName,
