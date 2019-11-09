@@ -8,21 +8,23 @@
     <!-- <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css"> -->
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <title>weather app</title>
-
 </head>
 
 <body>
 
     <div id="container">
-            
-            <h1>Weather App</h1>
-            <input type="text" id="city-input" placeholder="Type City Name" >
-            <button id="show">show</button>
+
+        <h1>Weather App</h1>
+        <input type="text" id="city-input" placeholder="Type City Name">
+        <button id="show">show</button>
 
     </div>
 
     <div id="data"> </div>
-        
+
+
+
+
 
     <script id="result-template" type="text/x-handlebars-template">
 
@@ -32,8 +34,11 @@
                     <div id="cityName">{{name}}</div>
                     <div id="cityTemp">{{temperature}}&#8451</div>
                 
+                    <div id="conditionPic">
+                        <img id="img" src=http://openweathermap.org/img/w/{{conditionPic}}.png>
+                    </div>
+                    
                     <div id="citycontition">{{condition}}</div>
-                    <div id="conditionPic">{{conditionPic}}</div>
                     <button class="button1" id="saveCity" >+</button>
                     <button class="button2" id="deletCity">x</button>
                 </div>

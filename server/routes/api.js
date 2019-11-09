@@ -46,7 +46,9 @@ router.post('/city', async function (req, res) {
     let body = req.body
     let c1 = new City(body)
     await c1.save()
-    res.send(`City ${c1.name} saved in DB`)
+    res.end() 
+    res.send(`City ${c1.name} saved in DB`) 
+
 })
 
 
@@ -58,7 +60,7 @@ router.delete('/city/:cityName', async function (req, res) {
     res.send(`city ${deleteCity.name} deleted from DB`)
 })
 
-
+ 
 
 
 module.exports = router

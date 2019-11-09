@@ -132,18 +132,22 @@ body {
     font-family: Helvetica;
     left: 20px;
 }
+
 #citycontition {
     position: absolute;
-    font-family: Helvetica;
-    right: 10px;
-    bottom: 70px;
+    right: 15px;
+    bottom: 50px;
+    font-size: 25px;
+
 }
 
-#conditionPic {
+#img {
     position: absolute;
-    font-family: Helvetica;
-    right: 10px;
-    bottom: 40px;
+    right: 0;
+    bottom: 80px;
+    width: 80px;
+    height: 70px;
+    
 }
 
 
@@ -157,12 +161,31 @@ body {
     #cityTemp {
         position: relative;
         font-size: 35px;
-        top: -40px;
-        left: 170px;
+        top: 20px;
+        left: 25px;
     }
 
+
     #cityName {
-       font-size: 35px;
+        position: relative;
+        font-size: 35px;
+        left: 20px;
+    }
+  
+
+    #citycontition {
+        position: absolute;
+        right: 15px;
+        bottom: 60px;
+    }
+    
+    #img {
+        position: absolute;
+        right: 0;
+        bottom: 80px;
+        width: 70px;
+        height: 70px;
+        
     }
 
 }
